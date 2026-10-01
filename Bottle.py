@@ -30,6 +30,7 @@ class Bottle:
             raise ValueError("Volume must be bigger or equal 0")
         else:
             self.volume_l = value
+
     def close(self):
         self.closed = True
 
