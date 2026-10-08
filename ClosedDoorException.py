@@ -1,0 +1,2 @@
+class ClosedDoorException(Exception):
+    pass
