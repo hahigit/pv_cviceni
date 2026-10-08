@@ -60,3 +60,7 @@ if __name__ == "__main__":
         z.pop()
     except PrazdnyZasobnikException as e:
         print("Chyba:", e)
+def peek(self):
+    if self._vrchol is None:
+        raise PrazdnyZasobnikException("Zasobnik je prazdny")
+    return self._vrchol.hodnota

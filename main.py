@@ -1,12 +1,8 @@
-from Bottle import Bottle
-from Door import Door
+from Auto import Auto
 
-lahev = Bottle(50)
-print(lahev.capacity_l)
+auto = Auto(30, 12.5)      # nádrž 30 l, spotřeba 12,5 l/100 km
 
-d = Door(zamceno=True)
-try:
-    d.otevrit()
-    print("Prosel jsem")
-except ZamceneDvereException as e:
-    print("Dvere jsou zamcene, nemuzes je otevrit")
+auto.natankuj(22.5)        # nádrž byla prázdná, takže teď je v ní 22,5 l
+auto.popojed(20)           # 20 km při 12,5 l/100 km = spotřeba 2,5 l
+
+print(auto.aktualni_stav_nadrze())   # 20.0
